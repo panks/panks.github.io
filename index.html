@@ -1,11 +1,48 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>
-    Pankaj's Page
-</title>
-<meta http-equiv="refresh" content="3; url=http://blog.panks.me/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pankaj's page</title>
+<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="tools/jquery.min.js"></script> 
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+<script type="text/javascript">
+var ss = 6;
+function countdown() {
+    ss = ss-1;
+    if (ss<0) {
+        window.location="http://blog.panks.me";
+    }
+    else {
+        document.getElementById("countdown").innerHTML=ss;
+        window.setTimeout("countdown()", 1000);
+    }
+}
+</script>
+
+
 </head>
-<body>
-Will update it soon. Redirecting you to my blog at <a href="http://blog.panks.me">http://blog.panks.me</a> in 3 seconds.
+<body onload="countdown()">
+<div class="black"></div>
+<div id="wrapper">
+	<div id="header">
+		<h1>Pankaj's page</h1>
+		<h2><strong class="sep-one"></strong>Will be updating this place soon..<strong class="sep-two"></strong></h2>
+	</div>
+	<div id="middle">
+        <p>Hold on, redirecting you to my blog in <span><span id="countdown">6</span></span> seconds. http://blog.panks.me</p>
+	</div>
+	<div id="footer">
+		<div>
+		<ul class="social">
+			<li class="facebook"><a href="http://facebook.com/panks.cogito"></li>
+			<li class="twitter"><a href="http://twitter.com/pankajxdx"></li>
+			<li class="youtube"><a href="#"></li>
+		</ul>
+		</div>
+	</div>
+</div>
 </body>
 </html>
